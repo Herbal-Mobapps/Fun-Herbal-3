@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TA_FunHerbal">
         <activity
+            android:name=".Activity.ChangeEmail"
+            android:exported="true" />
+        <activity
+            android:name=".Activity.ChangePassword"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".Activity.RegisterActivity"
             android:exported="true" />
         <activity
