@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TA_FunHerbal">
         <activity
+            android:name=".VideoActivity.VideoActivity"
+            android:exported="true" />
+        <activity
             android:name=".Activity.ChangeEmail"
             android:exported="true" />
         <activity

@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         setCurrentFragment(firstfragment)
         bottomNavigation = findViewById(R.id.navbottom)
+        @Suppress("DEPRECATION")
         bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId){
                 R.id.navigation_home -> setCurrentFragment(firstfragment)
