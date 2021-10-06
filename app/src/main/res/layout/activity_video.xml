@@ -17,7 +17,6 @@
         android:layout_height="wrap_content"
         android:text="Youtube Video"
         android:textSize="20dp"
-        android:fontFamily="@font/berkshire_swash"
         android:textAlignment="center"/>
     <Button
         android:id="@+id/btn_video_akarwangi"

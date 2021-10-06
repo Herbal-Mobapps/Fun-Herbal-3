@@ -10,6 +10,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TA_FunHerbal">
         <activity
+            android:name=".VideoActivity.VideoDaunSirihActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoActivity.VideoDaunSembungActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoActivity.VideoDaunSemanggiActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoActivity.VideoDaunSambilotoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoActivity.VideoBrotowaliActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoActivity.VideoBlustruActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoActivity.VideoBelimbingWuluhActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoActivity.VideoBayamDuriActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoActivity.VideoBayamActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoActivity.VideoAkarWangiActivity"
+            android:exported="true" />
+        <activity
             android:name=".VideoActivity.VideoActivity"
             android:exported="true" />
         <activity
