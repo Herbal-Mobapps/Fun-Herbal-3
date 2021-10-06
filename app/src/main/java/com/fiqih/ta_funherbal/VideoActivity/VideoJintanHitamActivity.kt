@@ -11,28 +11,28 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class VideoDaunSirihActivity : AppCompatActivity() {
-    lateinit var mWebViewsepuluh: WebView
-    val databasesepuluh = FirebaseDatabase.getInstance().getReference("videodaunsirih")
-
+class VideoJintanHitamActivity : AppCompatActivity() {
+    lateinit var mWebViewduapuluh: WebView
+    val databaseduapuluh = FirebaseDatabase.getInstance().getReference("videojintanhitam")
     @SuppressLint("SetJavaScriptEnabled")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_video_daun_sirih)
+        setContentView(R.layout.activity_video_jintan_hitam)
 
-        mWebViewsepuluh = findViewById(R.id.webviewsepuluh)
-        mWebViewsepuluh.settings.javaScriptEnabled = true
+        mWebViewduapuluh = findViewById(R.id.webviewduapuluh)
+        mWebViewduapuluh.settings.javaScriptEnabled = true
 
-        mWebViewsepuluh.webViewClient = object : WebViewClient(){
+        mWebViewduapuluh.webViewClient = object : WebViewClient(){
             override fun shouldOverrideUrlLoading(view: WebView?, url:String?): Boolean {
                 view!!.loadUrl(url.toString())
                 return true
             }
         }
-        databasesepuluh.addValueEventListener(object : ValueEventListener {
+        databaseduapuluh.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val messagesepuluh = snapshot.getValue(toString().javaClass)
-                mWebViewsepuluh.loadUrl(messagesepuluh.toString())
+                val messagesduapuluh = snapshot.getValue(toString().javaClass)
+                mWebViewduapuluh.loadUrl(messagesduapuluh.toString())
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -40,6 +40,5 @@ class VideoDaunSirihActivity : AppCompatActivity() {
             }
 
         })
-
     }
 }

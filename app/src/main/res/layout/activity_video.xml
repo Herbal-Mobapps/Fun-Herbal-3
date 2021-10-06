@@ -1,128 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".VideoActivity">
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    tools:context=".VideoActivity.VideoActivity">
 
-    <TextView
-        android:layout_marginTop="20dp"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Youtube Video"
-        android:textSize="20dp"
-        android:textAlignment="center"/>
-    <Button
-        android:id="@+id/btn_video_akarwangi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Akar Wangi"
-        android:textAllCaps="false" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Youtube Video"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+        <Button
+            android:id="@+id/btn_video_akarwangi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Akar Wangi"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_video_bayam"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Bayam"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_video_bayam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Bayam"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_video_bayamduri"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Bayam Duri"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_video_bayamduri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Bayam Duri"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_video_belimbingwuluh"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Belimbing Wuluh"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_video_belimbingwuluh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Belimbing Wuluh"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_video_blustru"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Blustru"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_video_blustru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Blustru"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_video_brotowali"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Brotowali"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_video_brotowali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Brotowali"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_video_daunsambiloto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Daun Sambiloto"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_video_daundewa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Daun Dewa"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_video_daunsemanggi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Daun Semanggi"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_video_daunkelor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Daun Kelor"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_video_daunmiana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:minHeight="32dp"
+            android:text="Daun Miana"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_video_daunsembung"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Daun Sembung"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_video_daunngokilo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Daun Ngokilo"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_video_daunpacarcina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Daun Pacar Cina"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_video_daunsirih"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Daun Sirih"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_video_daunpegangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Daun Pegangan"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_video_daunsaga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Daun Saga"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_video_daundewa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Daun Dewa"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_video_daunsambiloto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Daun Semanggi"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_video_daunkelor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Daun Kelor"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_video_daunsemanggi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Daun Semanggi"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:id="@+id/btn_video_daunmiana"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:minHeight="32dp"
-        android:text="Daun Miana"
-        android:textAllCaps="false"
-        tools:ignore="TouchTargetSizeCheck" />
+        <Button
+            android:id="@+id/btn_video_daunsembung"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Daun Sembung"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_video_daunsingkong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Daun Singkong"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/btn_video_daunsirih"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Daun Sirih"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_video_jahe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Jahe"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_video_jintanhitam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Jintan Hitam"
+            android:textAllCaps="false"/>
+    </LinearLayout>
 
 
-</LinearLayout>
+
+</ScrollView>

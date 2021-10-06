@@ -11,28 +11,29 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class VideoDaunSirihActivity : AppCompatActivity() {
-    lateinit var mWebViewsepuluh: WebView
-    val databasesepuluh = FirebaseDatabase.getInstance().getReference("videodaunsirih")
+class VideoDaunKelorActivity : AppCompatActivity() {
+    lateinit var mWebViewduabelas: WebView
+    val databaseduabelas = FirebaseDatabase.getInstance().getReference("videodaunkelor")
 
     @SuppressLint("SetJavaScriptEnabled")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_video_daun_sirih)
+        setContentView(R.layout.activity_video_daun_kelor)
 
-        mWebViewsepuluh = findViewById(R.id.webviewsepuluh)
-        mWebViewsepuluh.settings.javaScriptEnabled = true
+        mWebViewduabelas = findViewById(R.id.webviewduabelas)
+        mWebViewduabelas.settings.javaScriptEnabled = true
 
-        mWebViewsepuluh.webViewClient = object : WebViewClient(){
+        mWebViewduabelas.webViewClient = object : WebViewClient(){
             override fun shouldOverrideUrlLoading(view: WebView?, url:String?): Boolean {
                 view!!.loadUrl(url.toString())
                 return true
             }
         }
-        databasesepuluh.addValueEventListener(object : ValueEventListener {
+        databaseduabelas.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val messagesepuluh = snapshot.getValue(toString().javaClass)
-                mWebViewsepuluh.loadUrl(messagesepuluh.toString())
+                val messageduabelas = snapshot.getValue(toString().javaClass)
+                mWebViewduabelas.loadUrl(messageduabelas.toString())
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -40,6 +41,7 @@ class VideoDaunSirihActivity : AppCompatActivity() {
             }
 
         })
+
 
     }
 }

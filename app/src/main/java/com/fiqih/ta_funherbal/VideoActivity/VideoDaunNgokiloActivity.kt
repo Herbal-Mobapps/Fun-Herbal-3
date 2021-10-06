@@ -11,28 +11,27 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class VideoDaunSirihActivity : AppCompatActivity() {
-    lateinit var mWebViewsepuluh: WebView
-    val databasesepuluh = FirebaseDatabase.getInstance().getReference("videodaunsirih")
-
+class VideoDaunNgokiloActivity : AppCompatActivity() {
+    lateinit var mWebViewempatbelas: WebView
+    val databaseempatbelas = FirebaseDatabase.getInstance().getReference("videoobatngokilo")
     @SuppressLint("SetJavaScriptEnabled")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_video_daun_sirih)
+        setContentView(R.layout.activity_video_daun_ngokilo)
+        mWebViewempatbelas = findViewById(R.id.webviewempatbelas)
+        mWebViewempatbelas.settings.javaScriptEnabled = true
 
-        mWebViewsepuluh = findViewById(R.id.webviewsepuluh)
-        mWebViewsepuluh.settings.javaScriptEnabled = true
-
-        mWebViewsepuluh.webViewClient = object : WebViewClient(){
+        mWebViewempatbelas.webViewClient = object : WebViewClient(){
             override fun shouldOverrideUrlLoading(view: WebView?, url:String?): Boolean {
                 view!!.loadUrl(url.toString())
                 return true
             }
         }
-        databasesepuluh.addValueEventListener(object : ValueEventListener {
+        databaseempatbelas.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val messagesepuluh = snapshot.getValue(toString().javaClass)
-                mWebViewsepuluh.loadUrl(messagesepuluh.toString())
+                val messageempatbelas = snapshot.getValue(toString().javaClass)
+                mWebViewempatbelas.loadUrl(messageempatbelas.toString())
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -40,6 +39,5 @@ class VideoDaunSirihActivity : AppCompatActivity() {
             }
 
         })
-
     }
 }

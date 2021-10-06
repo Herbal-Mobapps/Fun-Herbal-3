@@ -11,28 +11,28 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class VideoDaunSirihActivity : AppCompatActivity() {
-    lateinit var mWebViewsepuluh: WebView
-    val databasesepuluh = FirebaseDatabase.getInstance().getReference("videodaunsirih")
-
+class VideoDaunPacarCinaActivity : AppCompatActivity() {
+    lateinit var mWebViewlimabelas: WebView
+    val databaselimabelas = FirebaseDatabase.getInstance().getReference("daunpacarcina")
     @SuppressLint("SetJavaScriptEnabled")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_video_daun_sirih)
+        setContentView(R.layout.activity_video_daun_pacar_cina)
 
-        mWebViewsepuluh = findViewById(R.id.webviewsepuluh)
-        mWebViewsepuluh.settings.javaScriptEnabled = true
+        mWebViewlimabelas = findViewById(R.id.webviewlimabelas)
+        mWebViewlimabelas.settings.javaScriptEnabled = true
 
-        mWebViewsepuluh.webViewClient = object : WebViewClient(){
+        mWebViewlimabelas.webViewClient = object : WebViewClient(){
             override fun shouldOverrideUrlLoading(view: WebView?, url:String?): Boolean {
                 view!!.loadUrl(url.toString())
                 return true
             }
         }
-        databasesepuluh.addValueEventListener(object : ValueEventListener {
+        databaselimabelas.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val messagesepuluh = snapshot.getValue(toString().javaClass)
-                mWebViewsepuluh.loadUrl(messagesepuluh.toString())
+                val messagelimabelas = snapshot.getValue(toString().javaClass)
+                mWebViewlimabelas.loadUrl(messagelimabelas.toString())
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -40,6 +40,5 @@ class VideoDaunSirihActivity : AppCompatActivity() {
             }
 
         })
-
     }
 }

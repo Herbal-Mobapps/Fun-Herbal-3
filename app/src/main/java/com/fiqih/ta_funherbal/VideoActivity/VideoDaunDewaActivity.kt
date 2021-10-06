@@ -11,28 +11,28 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class VideoDaunSirihActivity : AppCompatActivity() {
-    lateinit var mWebViewsepuluh: WebView
-    val databasesepuluh = FirebaseDatabase.getInstance().getReference("videodaunsirih")
+class VideoDaunDewaActivity : AppCompatActivity() {
+    lateinit var mWebViewsebelas: WebView
+    val databasesebelas = FirebaseDatabase.getInstance().getReference("videodaundewa")
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_video_daun_sirih)
+        setContentView(R.layout.activity_video_daun_dewa)
 
-        mWebViewsepuluh = findViewById(R.id.webviewsepuluh)
-        mWebViewsepuluh.settings.javaScriptEnabled = true
+        mWebViewsebelas = findViewById(R.id.webviewsebelas)
+        mWebViewsebelas.settings.javaScriptEnabled = true
 
-        mWebViewsepuluh.webViewClient = object : WebViewClient(){
+        mWebViewsebelas.webViewClient = object : WebViewClient(){
             override fun shouldOverrideUrlLoading(view: WebView?, url:String?): Boolean {
                 view!!.loadUrl(url.toString())
                 return true
             }
         }
-        databasesepuluh.addValueEventListener(object : ValueEventListener {
+        databasesebelas.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val messagesepuluh = snapshot.getValue(toString().javaClass)
-                mWebViewsepuluh.loadUrl(messagesepuluh.toString())
+                mWebViewsebelas.loadUrl(messagesepuluh.toString())
             }
 
             override fun onCancelled(error: DatabaseError) {

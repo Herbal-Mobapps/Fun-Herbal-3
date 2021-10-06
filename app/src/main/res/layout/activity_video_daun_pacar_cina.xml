@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VideoActivity.VideoDaunSembungActivity"
+    tools:context=".VideoActivity.VideoDaunPacarCinaActivity"
     android:orientation="vertical">
     <WebView
-        android:id="@+id/webviewsepuluh"
+        android:id="@+id/webviewlimabelas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>
