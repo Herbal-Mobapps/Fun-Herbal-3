@@ -156,13 +156,13 @@
                     <ImageView
                         android:layout_width="160dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/ic_baseline_medication_24"
+                        android:src="@drawable/ic_baseline_quiz_24"
                         android:layout_marginTop="18dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Medical"
+                        android:text="Quiz"
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="@color/white"
