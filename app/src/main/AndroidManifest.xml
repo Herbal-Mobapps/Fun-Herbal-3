@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TA_FunHerbal">
         <activity
+            android:name=".Activity.KuisActivity"
+            android:exported="true" />
+        <activity
             android:name=".Activity.TanamanActivity"
             android:exported="true" />
         <activity
