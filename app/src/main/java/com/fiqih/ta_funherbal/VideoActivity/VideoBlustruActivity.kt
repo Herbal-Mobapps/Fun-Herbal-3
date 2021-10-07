@@ -13,7 +13,7 @@ import com.google.firebase.database.ValueEventListener
 
 class VideoBlustruActivity : AppCompatActivity() {
     lateinit var mWebViewlima : WebView
-    val databaselima = FirebaseDatabase.getInstance().getReference("Videotanamanblustru")
+    val databaselima = FirebaseDatabase.getInstance().getReference("videotanamanblustru")
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {

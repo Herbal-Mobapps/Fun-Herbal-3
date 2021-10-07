@@ -1,4 +1,4 @@
-package com.fiqih.ta_funherbal.VideoActivity
+package com.fiqih.ta_funherbal.Activity
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
@@ -11,29 +11,28 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class VideoAkarWangiActivity : AppCompatActivity() {
-    lateinit var mWebViewSatu : WebView
-    val databasesatu = FirebaseDatabase.getInstance().getReference("videoakarwangi")
-
+class LokasiActivity : AppCompatActivity() {
+    lateinit var mWebViewLokasi : WebView
+    val databasekuis = FirebaseDatabase.getInstance().getReference("lokasi")
     @SuppressLint("SetJavaScriptEnabled")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_video_akar_wangi)
+        setContentView(R.layout.activity_lokasi)
 
-        mWebViewSatu = findViewById(R.id.webviewsatu)
-        mWebViewSatu.settings.javaScriptEnabled = true
+        mWebViewLokasi = findViewById(R.id.webviewlokasi)
+        mWebViewLokasi.settings.javaScriptEnabled = true
 
-        mWebViewSatu.webViewClient = object : WebViewClient(){
+        mWebViewLokasi.webViewClient = object : WebViewClient(){
             override fun shouldOverrideUrlLoading(view: WebView?, url:String?): Boolean {
                 view!!.loadUrl(url.toString())
                 return true
             }
         }
-        databasesatu.addValueEventListener(object : ValueEventListener {
+        databasekuis.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val messagesatu = snapshot.getValue(toString().javaClass)
-                mWebViewSatu.loadUrl(messagesatu.toString())
+                val messagelokasi = snapshot.getValue(toString().javaClass)
+                mWebViewLokasi.loadUrl(messagelokasi.toString())
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -41,6 +40,6 @@ class VideoAkarWangiActivity : AppCompatActivity() {
             }
 
         })
-    }
 
     }
+}

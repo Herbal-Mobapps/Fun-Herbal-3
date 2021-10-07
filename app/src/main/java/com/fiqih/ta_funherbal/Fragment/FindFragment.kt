@@ -8,6 +8,7 @@ import android.view.View
 import android.view.View.inflate
 import android.view.ViewGroup
 import com.fiqih.ta_funherbal.Activity.KuisActivity
+import com.fiqih.ta_funherbal.Activity.LokasiActivity
 import com.fiqih.ta_funherbal.VideoActivity.VideoActivity
 import com.fiqih.ta_funherbal.databinding.FragmentFindBinding
 
@@ -26,6 +27,10 @@ class FindFragment : Fragment() {
         }
         bind.btnKuis.setOnClickListener {
             val intent = Intent(this@FindFragment.requireContext(),KuisActivity::class.java)
+            startActivity(intent)
+        }
+        bind.btnLokasi.setOnClickListener {
+            val intent = Intent(this@FindFragment.requireContext(),LokasiActivity::class.java)
             startActivity(intent)
         }
         return bind.root

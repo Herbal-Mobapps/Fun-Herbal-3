@@ -120,6 +120,7 @@
                     >
 
                     <ImageView
+                        android:id="@+id/btnLokasi"
                         android:layout_width="140dp"
                         android:layout_height="80dp"
                         android:src="@drawable/ic_baseline_location_on_24"

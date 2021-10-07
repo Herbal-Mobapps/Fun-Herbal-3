@@ -13,7 +13,7 @@ import com.google.firebase.database.ValueEventListener
 
 class VideoDaunPacarCinaActivity : AppCompatActivity() {
     lateinit var mWebViewlimabelas: WebView
-    val databaselimabelas = FirebaseDatabase.getInstance().getReference("daunpacarcina")
+    val databaselimabelas = FirebaseDatabase.getInstance().getReference("videodaunpacarcina")
     @SuppressLint("SetJavaScriptEnabled")
 
     override fun onCreate(savedInstanceState: Bundle?) {
