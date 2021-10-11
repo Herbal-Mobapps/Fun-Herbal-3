@@ -48,18 +48,18 @@
 
                 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-                <TextView
+                <EditText
                     android:id="@+id/txtUsername"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:drawablePadding="10dp"
-                    android:text="Ucup Gacor"
+                    android:text="Masukkan Nama"
                     android:textColor="@color/white"
                     android:textSize="20dp"
                     android:textStyle="bold"
-                    app:drawableEndCompat="@drawable/ic_baseline_edit_24"
+
                     app:drawableTint="@color/white" />
             </LinearLayout>
 
@@ -121,7 +121,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.5"
-                                android:text="Ucupgacor@gmail.com"
+                                android:hint="Email"
                                 android:textColor="@color/Gray"
                                 android:textSize="15dp"
                                 android:textStyle="bold" />
