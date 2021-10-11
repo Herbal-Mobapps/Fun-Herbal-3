@@ -22,19 +22,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        val firstfragment = HomeFragment()
-        val secondFragment = FindFragment()
-        val thirdFragment = ProfileFragment()
+        val firstFragment = FindFragment()
+        val secondFragment = ProfileFragment()
 
 
-        setCurrentFragment(firstfragment)
+
+        setCurrentFragment(firstFragment)
         bottomNavigation = findViewById(R.id.navbottom)
         @Suppress("DEPRECATION")
         bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId){
-                R.id.navigation_home -> setCurrentFragment(firstfragment)
-                R.id.navigation_find -> setCurrentFragment(secondFragment)
-                R.id.navigation_profile -> setCurrentFragment(thirdFragment)
+                R.id.navigation_find -> setCurrentFragment(firstFragment)
+                R.id.navigation_profile -> setCurrentFragment(secondFragment)
+
             }
             true
         }
