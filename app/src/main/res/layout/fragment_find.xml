@@ -254,6 +254,7 @@
                             >
 
                             <ImageView
+                                android:id="@+id/btn_Tanaman"
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
                                 android:src="@drawable/ic_baseline_local_florist_24"

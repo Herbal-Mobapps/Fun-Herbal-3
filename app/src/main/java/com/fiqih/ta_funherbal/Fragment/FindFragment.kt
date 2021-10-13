@@ -13,6 +13,7 @@ import com.fiqih.ta_funherbal.Activity.KuisActivity
 import com.fiqih.ta_funherbal.Activity.LokasiActivity
 import com.fiqih.ta_funherbal.Adapter.AdapterSlider
 import com.fiqih.ta_funherbal.R
+import com.fiqih.ta_funherbal.TanamanActivity
 import com.fiqih.ta_funherbal.VideoActivity.VideoActivity
 import com.fiqih.ta_funherbal.databinding.FragmentFindBinding
 import kotlinx.android.synthetic.main.fragment_find.*
@@ -48,6 +49,10 @@ class FindFragment : Fragment() {
 
         _binding = FragmentFindBinding.bind(view)
 
+        binding?.btnTanaman?.setOnClickListener {
+            val intent = Intent(this@FindFragment.requireContext(),TanamanActivity::class.java)
+            startActivity(intent)
+        }
         binding?.btnVideo?.setOnClickListener {
             val intent = Intent(this@FindFragment.requireContext(), VideoActivity::class.java)
             startActivity(intent)
