@@ -137,13 +137,13 @@
                                 android:visibility="gone" />
                         </LinearLayout>
 
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:src="@drawable/ic_baseline_navigate_next_24"
-                            app:tint="@color/colortextBlue" />
+<!--                        <ImageView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_alignParentEnd="true"-->
+<!--                            android:layout_centerVertical="true"-->
+<!--                            android:src="@drawable/ic_baseline_navigate_next_24"-->
+<!--                            app:tint="@color/colortextBlue" />-->
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>

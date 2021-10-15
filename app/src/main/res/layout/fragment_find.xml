@@ -198,77 +198,77 @@
 
                     </androidx.cardview.widget.CardView>
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="5dp"
-                        app:cardBackgroundColor="@color/colortextBlue"
-                        android:layout_margin="10dp">
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="170dp"-->
+<!--                        android:layout_height="170dp"-->
+<!--                        app:cardCornerRadius="12dp"-->
+<!--                        app:cardElevation="5dp"-->
+<!--                        app:cardBackgroundColor="@color/colortextBlue"-->
+<!--                        android:layout_margin="10dp">-->
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            >
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:gravity="center"-->
+<!--                            >-->
 
-                            <ImageView
-                                android:id="@+id/btnEditProfile"
-                                android:clickable="true"
-                                android:layout_width="160dp"
-                                android:layout_height="80dp"
-                                android:src="@drawable/ic_baseline_edit_24"
-                                android:layout_marginTop="18dp"/>
+<!--                            <ImageView-->
+<!--                                android:id="@+id/btnEditProfile"-->
+<!--                                android:clickable="true"-->
+<!--                                android:layout_width="160dp"-->
+<!--                                android:layout_height="80dp"-->
+<!--                                android:src="@drawable/ic_baseline_edit_24"-->
+<!--                                android:layout_marginTop="18dp"/>-->
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Edit Profile"
-                                android:textStyle="bold"
-                                android:textSize="18sp"
-                                android:textColor="@color/white"
-                                android:layout_marginTop="20dp"/>
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Edit Profile"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:textSize="18sp"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:layout_marginTop="20dp"/>-->
 
-                        </LinearLayout>
+<!--                        </LinearLayout>-->
 
-                    </androidx.cardview.widget.CardView>
+<!--                    </androidx.cardview.widget.CardView>-->
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="170dp"
-                        android:layout_height="170dp"
-                        app:cardCornerRadius="12dp"
-                        app:cardElevation="5dp"
-                        app:cardBackgroundColor="@color/colortextBlue"
-                        android:layout_margin="10dp">
+<!--                    <androidx.cardview.widget.CardView-->
+<!--                        android:layout_width="170dp"-->
+<!--                        android:layout_height="170dp"-->
+<!--                        app:cardCornerRadius="12dp"-->
+<!--                        app:cardElevation="5dp"-->
+<!--                        app:cardBackgroundColor="@color/colortextBlue"-->
+<!--                        android:layout_margin="10dp">-->
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:gravity="center"
-                            >
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:gravity="center"-->
+<!--                            >-->
 
-                            <ImageView
-                                android:id="@+id/btnProfile"
-                                android:clickable="true"
-                                android:layout_width="160dp"
-                                android:layout_height="80dp"
-                                android:src="@drawable/ic_profile"
-                                android:layout_marginTop="18dp"/>
+<!--                            <ImageView-->
+<!--                                android:id="@+id/btnProfile"-->
+<!--                                android:clickable="true"-->
+<!--                                android:layout_width="160dp"-->
+<!--                                android:layout_height="80dp"-->
+<!--                                android:src="@drawable/ic_profile"-->
+<!--                                android:layout_marginTop="18dp"/>-->
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Profile"
-                                android:textStyle="bold"
-                                android:textSize="18sp"
-                                android:textColor="@color/white"
-                                android:layout_marginTop="20dp"/>
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="Profile"-->
+<!--                                android:textStyle="bold"-->
+<!--                                android:textSize="18sp"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:layout_marginTop="20dp"/>-->
 
-                        </LinearLayout>
+<!--                        </LinearLayout>-->
 
-                    </androidx.cardview.widget.CardView>
+<!--                    </androidx.cardview.widget.CardView>-->
 
 
                 </GridLayout>
