@@ -13,21 +13,34 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import com.fiqih.ta_funherbal.Activity.LoginActivity
 import com.fiqih.ta_funherbal.R
+import com.fiqih.ta_funherbal.TanamanActivity
+import com.fiqih.ta_funherbal.databinding.FragmentFindBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import java.io.ByteArrayOutputStream
 
 
+
+
 class ProfileFragment : Fragment() {
     // TODO: Rename and change types of parameters
-    companion object{
-        const val REQUEST_CAMERA = 100
-    }
+
 
     private lateinit var imageUri : Uri
 
+    private lateinit var auth : FirebaseAuth
+
+    companion object{
+        const val REQUEST_CAMERA = 100
+    }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_profile, container, false)
@@ -36,6 +49,16 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        auth = FirebaseAuth.getInstance()
+
+        keluarTV.setOnClickListener {
+            auth.signOut()
+            val intent = Intent(this@ProfileFragment.requireContext(), LoginActivity::class.java)
+            startActivity(intent)
+
+        }
+
+
         imgCamera.setOnClickListener {
             intentCamera()
         }
