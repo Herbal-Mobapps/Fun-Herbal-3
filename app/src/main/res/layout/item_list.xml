@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="isTanaman"
-            type="com.fiqih.ta_funherbal.model.TanamanData" />
-
-
+            name="mtanaman" type="com.fiqih.ta_funherbal.model.TanamanData" />
     </data>
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +23,8 @@
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/tanamanImg"
-                    android:imageUrl="@{isTanaman.img}"
+                    android:contentDescription="@null"
+                    android:imageUrl="@{mtanaman.img}"
                     android:scaleType="centerCrop"
                     android:layout_width="140dp"
                     android:layout_height="140dp"/>
@@ -42,11 +40,10 @@
                         android:gravity="center"
                         android:textStyle="bold|normal"
                         android:layout_gravity="center"
-                        android:text="@{isTanaman.name}"
+                        android:text="@{mtanaman.name}"
                         android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-
                     <TextView
                         android:id="@+id/tanamanInfo"
                         android:textColor="@android:color/darker_gray"
@@ -54,24 +51,16 @@
                         android:gravity="center"
                         android:textStyle="bold|normal"
                         android:layout_gravity="center"
-                        android:text="@{isTanaman.info}"
+                        android:text="@{mtanaman.info}"
                         android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
-
-
-
-
                 </LinearLayout>
             </LinearLayout>
             <View
                 android:background="@android:color/darker_gray"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"/>
-
-
-
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
 </layout>

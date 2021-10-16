@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.fiqih.ta_funherbal.Fragment.FindFragment
-import com.fiqih.ta_funherbal.Fragment.HomeFragment
 import com.fiqih.ta_funherbal.Fragment.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 

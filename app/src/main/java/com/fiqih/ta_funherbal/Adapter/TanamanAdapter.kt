@@ -19,16 +19,14 @@ class TanamanAdapter (
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TanamanViewHolder {
         val inflter = LayoutInflater.from(parent.context)
-        val v = DataBindingUtil.inflate<ItemListBinding>(
-            inflter, R.layout.item_list,parent,
-            false)
+        val v = DataBindingUtil.inflate<ItemListBinding>(inflter, R.layout.item_list,parent, false)
         return TanamanViewHolder(v)
 
     }
 
     override fun onBindViewHolder(holder: TanamanViewHolder, position: Int) {
         val newList = tanamanList[position]
-        holder.v.isTanaman = tanamanList[position]
+        holder.v.mtanaman = tanamanList[position]
         holder.v.root.setOnClickListener {
             val img = newList.img
             val name = newList.name

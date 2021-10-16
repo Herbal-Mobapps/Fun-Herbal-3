@@ -8,9 +8,9 @@ class TanamanData {
     constructor(){}
 
     constructor(
-        name:String?,
-        info:String?,
-        img:String?
+        name:String? = null,
+        info:String? = null,
+        img:String? = null
     ){
         this.name = name
         this.info = info
