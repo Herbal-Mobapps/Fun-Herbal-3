@@ -55,7 +55,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:drawablePadding="10dp"
-                    android:hint="Nama"
+                    android:hint="Masukkan Nama"
                     android:textAlignment="center"
                     android:textAllCaps="false"
                     android:textColor="@color/white"

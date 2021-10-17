@@ -20,10 +20,12 @@ import com.fiqih.ta_funherbal.Activity.LoginActivity
 import com.fiqih.ta_funherbal.R
 import com.fiqih.ta_funherbal.TanamanActivity
 import com.fiqih.ta_funherbal.databinding.FragmentFindBinding
+import com.fiqih.ta_funherbal.model.Users
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.squareup.picasso.Picasso
@@ -51,11 +53,13 @@ class ProfileFragment : Fragment() {
 
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
 
         val user = auth.currentUser
+
         if (user != null){
             if(user.photoUrl != null){
                 Picasso.get().load(user.photoUrl).into(imgProfile)
@@ -67,12 +71,24 @@ class ProfileFragment : Fragment() {
 
         }
         btnUpdateProfile.setOnClickListener {
+            val ref = FirebaseDatabase.getInstance().getReference("users/${FirebaseAuth.getInstance().currentUser?.uid}")
             val image = when{
                 ::imageUri.isInitialized -> imageUri
                 user?.photoUrl == null -> Uri.parse("https://picsum.photos/id/1/200/300")
                 else -> user.photoUrl
             }
             val name = etName.text.toString().trim()
+            val email = etEmail.text.toString().trim()
+
+
+            val usersid = ref.push().key
+            val users = Users(usersid,name,email)
+            if(usersid !=null ){
+                ref.child(usersid).setValue(users).addOnCompleteListener {
+                    Toast.makeText(activity,"Data Berhasil Disimpan",Toast.LENGTH_SHORT).show()
+                }
+            }
+
 
             if(name.isEmpty()){
                 etName.error = "Nama harus diisi"
@@ -110,6 +126,7 @@ class ProfileFragment : Fragment() {
             intentCamera()
         }
     }
+
 
     @SuppressLint("QueryPermissionsNeeded")
     private fun intentCamera() {
@@ -155,5 +172,6 @@ class ProfileFragment : Fragment() {
             }
 
     }
+
 
 }
