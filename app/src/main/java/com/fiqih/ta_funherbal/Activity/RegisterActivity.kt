@@ -15,6 +15,7 @@ import com.fiqih.ta_funherbal.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var EmailRegister: EditText
@@ -87,6 +88,14 @@ class RegisterActivity : AppCompatActivity() {
 //            val intent = Intent(this, LoginActivity::class.java)
 //            startActivity(intent)
 //        }
+        punyakunTV.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+        backloginIV.setOnClickListener {
+            val intent = Intent(this,LoginActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onStart() {

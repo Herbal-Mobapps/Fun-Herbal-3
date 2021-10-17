@@ -128,8 +128,9 @@
                         app:spinning_bar_width="4dp" />
 
                     <TextView
-                        android:id="@+id/backloginTV"
+                        android:id="@+id/punyakunTV"
                         style="@style/parent"
+                        android:clickable="true"
                         android:layout_marginTop="@dimen/loginViewsMargin"
                         android:onClick="onLoginClick"
                         android:text="Sudah punya akun?"
