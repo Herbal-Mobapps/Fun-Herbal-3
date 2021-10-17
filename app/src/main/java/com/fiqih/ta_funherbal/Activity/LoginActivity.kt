@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
-import android.view.View
 import android.widget.*
 import com.fiqih.ta_funherbal.MainActivity
 import com.fiqih.ta_funherbal.R
@@ -19,6 +18,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var btnLoginLogin: Button
     private lateinit var btnRegisterLogin: TextView
     private lateinit var LoginCheckBox: CheckBox
+    private lateinit var lupapasswordTV : TextView
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +31,7 @@ class LoginActivity : AppCompatActivity() {
         btnLoginLogin = findViewById(R.id.btnLoginLogin)
         btnRegisterLogin = findViewById(R.id.btnRegisterLogin)
         LoginCheckBox = findViewById(R.id.loginShowCheckBox)
+        lupapasswordTV = findViewById(R.id.lupapasswordTV)
 
         LoginCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
@@ -64,6 +65,12 @@ class LoginActivity : AppCompatActivity() {
         btnRegisterLogin.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
+        }
+
+        lupapasswordTV.setOnClickListener {
+            Intent(this@LoginActivity,ResetPassword::class.java).also{
+                startActivity(it)
+            }
         }
     }
 }

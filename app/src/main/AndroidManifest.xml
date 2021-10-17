@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TA_FunHerbal">
         <activity
+            android:name=".Activity.ResetPassword"
+            android:exported="true" />
+        <activity
             android:name=".view.TanamanActivity2"
             android:exported="true" />
         <activity
