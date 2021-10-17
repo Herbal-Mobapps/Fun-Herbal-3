@@ -14,15 +14,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import com.fiqih.ta_funherbal.Activity.LoginActivity
 import com.fiqih.ta_funherbal.R
 import com.fiqih.ta_funherbal.TanamanActivity
 import com.fiqih.ta_funherbal.databinding.FragmentFindBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import java.io.ByteArrayOutputStream
@@ -51,6 +54,43 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
 
+        val user = auth.currentUser
+        if (user != null){
+            if(user.photoUrl != null){
+                Picasso.get().load(user.photoUrl).into(imgProfile)
+            } else{
+                Picasso.get().load("https://picsum.photos/id/1/200/300").into(imgProfile)
+            }
+            etName.setText(user.displayName)
+            etEmail.setText(user.email)
+
+        }
+        btnUpdateProfile.setOnClickListener {
+            val image = when{
+                ::imageUri.isInitialized -> imageUri
+                user?.photoUrl == null -> Uri.parse("https://picsum.photos/id/1/200/300")
+                else -> user.photoUrl
+            }
+            val name = etName.text.toString().trim()
+
+            if(name.isEmpty()){
+                etName.error = "Nama harus diisi"
+                etName.requestFocus()
+                return@setOnClickListener
+            }
+            UserProfileChangeRequest.Builder()
+                .setDisplayName(name)
+                .setPhotoUri(image)
+                .build().also {
+                    user?.updateProfile(it)?.addOnCompleteListener {
+                        if(it.isSuccessful){
+                            Toast.makeText(activity,"Profile Updated",Toast.LENGTH_SHORT).show()
+                        }else{
+                            Toast.makeText(activity,"${it.exception?.message}",Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
+        }
         keluarTV.setOnClickListener {
             auth.signOut()
             val intent = Intent(this@ProfileFragment.requireContext(), LoginActivity::class.java)

@@ -48,13 +48,15 @@
                 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
                 <EditText
-                    android:id="@+id/txtUsername"
+                    android:id="@+id/etName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:drawablePadding="10dp"
-                    android:hint="Masukkan Nama"
+                    android:hint="Nama"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -116,7 +118,7 @@
                             android:weightSum="2">
 
                             <TextView
-                                android:id="@+id/txtEmail"
+                                android:id="@+id/etEmail"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1.5"
