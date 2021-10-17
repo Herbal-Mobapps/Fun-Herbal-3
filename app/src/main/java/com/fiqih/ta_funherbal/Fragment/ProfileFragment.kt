@@ -15,6 +15,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import com.fiqih.ta_funherbal.Activity.ChangePassword
 import com.fiqih.ta_funherbal.Activity.LoginActivity
 import com.fiqih.ta_funherbal.R
 import com.fiqih.ta_funherbal.TanamanActivity
@@ -97,6 +98,12 @@ class ProfileFragment : Fragment() {
             startActivity(intent)
 
         }
+
+        gantipasswordTV.setOnClickListener {
+            val intent = Intent(this@ProfileFragment.requireContext(),ChangePassword::class.java)
+            startActivity(intent)
+        }
+
 
 
         imgCamera.setOnClickListener {
